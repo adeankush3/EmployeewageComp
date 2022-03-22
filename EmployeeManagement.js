@@ -41,3 +41,14 @@ checkStatus = Math.floor(Math.random() * 10) % 3;
 emphr = GetWorkingHour(checkStatus)
 let empWage = emphr * WAGE_PER_HRS;
 console.log("Employee wage is : "+empWage);
+
+
+const WORKING_DAYS_IN_MONTH = 20;
+
+for(let i = 0; i < WORKING_DAYS_IN_MONTH ; i++)
+{
+    emphr += GetWorkingHour(checkStatus) ;
+}
+
+empWage = emphr * WAGE_PER_HRS;
+console.log("Total Work Hours :"+emphr+" Total Employee wage for a Month : "+empWage);
