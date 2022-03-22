@@ -52,3 +52,16 @@ for(let i = 0; i < WORKING_DAYS_IN_MONTH ; i++)
 
 empWage = emphr * WAGE_PER_HRS;
 console.log("Total Work Hours :"+emphr+" Total Employee wage for a Month : "+empWage);
+
+
+const MAX_WORKING_HRS_IN_MONTH = 160;
+let total_empHRs = 0;
+let total_workingDays = 0;
+
+while(total_empHRs <= MAX_WORKING_HRS_IN_MONTH && total_workingDays < WORKING_DAYS_IN_MONTH)
+{
+    total_workingDays++;
+    total_empHRs += GetWorkingHour(checkStatus);
+}
+empWage = total_empHRs * WAGE_PER_HRS;
+console.log("Total Working Days: "+total_workingDays+"  Total working Hours :"+total_empHRs+"  Total Employee wage : "+empWage);
