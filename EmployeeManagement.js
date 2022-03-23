@@ -95,3 +95,15 @@ function TotalWages(totalwages,empWage)
     return totalwages + empWage;
 }
 console.log("UC7A-Employee wage with reduce : " + empDailyWageArr.reduce(TotalWages,0));
+
+
+let dailyCounter = 0;
+
+function dayCountWithWageMapping(empWage)
+{
+    dailyCounter ++;
+    return dailyCounter + " = "+ dailyempWage+"\n";
+}
+
+let dayCountWithWageMappingArray = empDailyWageArr.map(dayCountWithWageMapping);
+console.log("Day with Wages :\n"+dayCountWithWageMappingArray);
