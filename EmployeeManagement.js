@@ -109,9 +109,9 @@ let dayCountWithWageMappingArray = empDailyWageArr.map(dayCountWithWageMapping);
 console.log("UC7B-Day with Wages :\n"+dayCountWithWageMappingArray);
 
 
-function fullTimeWage(dailyWage)
+function fullTimeWage(dailyempWage)
 {
-    return dailyWage.includes("160");
+    return dailyempWage.includes("160");
 }
 
 let fullDayWageArray = dayCountWithWageMappingArray.filter(fullTimeWage);
@@ -129,3 +129,15 @@ function isAnyPartTimeWage(dailyempWage)
 }
 
 console.log("UC7F-Check if any Part time wage : "+dayCountWithWageMappingArray.some(isAnyPartTimeWage));
+
+
+function totalDaysWorked(numOfDays,dailyempWage)
+{
+    if(dailyempWage >0)
+    {
+        numOfDays++;
+    }
+    return numOfDays;
+}
+
+console.log("UC7G-Number of days Employee worked: "+empDailyWageArr.reduce(totalDaysWorked,0));
