@@ -115,4 +115,7 @@ function fullTimeWage(dailyWage)
 }
 
 let fullDayWageArray = dayCountWithWageMappingArray.filter(fullTimeWage);
-console.log("UC8B-filtered result for full time wage 160 earned by EMployee:\n"+fullDayWageArray);
+console.log("UC7C-Daily Wage filtered when full time wage earned by EMployee:\n"+fullDayWageArray);
+
+
+console.log("UC7D- First time full time wage earned by EMployee:\n"+dayCountWithWageMappingArray.find(fullTimeWage));
