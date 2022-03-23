@@ -120,4 +120,12 @@ console.log("UC7C-Daily Wage filtered when full time wage earned by EMployee:\n"
 
 console.log("UC7D- First time full time wage earned by EMployee:\n"+dayCountWithWageMappingArray.find(fullTimeWage));
 
-console.log("Check All elements have full time wage: "+fullDayWageArray.every(fullTimeWage));
+console.log("UC7E-Check All elements have full time wage: "+fullDayWageArray.every(fullTimeWage));
+
+
+function isAnyPartTimeWage(dailyempWage)
+{
+    return dailyempWage.includes("80");
+}
+
+console.log("UC7F-Check if any Part time wage : "+dayCountWithWageMappingArray.some(isAnyPartTimeWage));
