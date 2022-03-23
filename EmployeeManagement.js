@@ -141,3 +141,9 @@ function totalDaysWorked(numOfDays,dailyempWage)
 }
 
 console.log("UC7G-Number of days Employee worked: "+empDailyWageArr.reduce(totalDaysWorked,0));
+
+
+let empDailyWageMap =new Map;
+console.log(empDailyWageMap);
+empDailyWageMap.set(total_workingDays,calDailyWage(emphr));
+console.log("Employee Daily Wage using Map :"+Array.from(empDailyWageMap.values()).reduce(TotalWages,0));
