@@ -99,11 +99,20 @@ console.log("UC7A-Employee wage with reduce : " + empDailyWageArr.reduce(TotalWa
 
 let dailyCounter = 0;
 
-function dayCountWithWageMapping(empWage)
+function dayCountWithWageMapping(dailyempWage)
 {
     dailyCounter ++;
     return dailyCounter + " = "+ dailyempWage+"\n";
 }
 
 let dayCountWithWageMappingArray = empDailyWageArr.map(dayCountWithWageMapping);
-console.log("Day with Wages :\n"+dayCountWithWageMappingArray);
+console.log("UC7B-Day with Wages :\n"+dayCountWithWageMappingArray);
+
+
+function fullTimeWage(dailyWage)
+{
+    return dailyWage.includes("160");
+}
+
+let fullDayWageArray = dayCountWithWageMappingArray.filter(fullTimeWage);
+console.log("UC8B-filtered result for full time wage 160 earned by EMployee:\n"+fullDayWageArray);
