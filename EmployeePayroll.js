@@ -34,3 +34,12 @@ class EmployeePayroll
 
 let employeePayroll = new EmployeePayroll(1,"Ankush",55000,"M",new Date());
 console.log(employeePayroll.toString());
+
+
+try{
+    let employeePayroll = new EmployeePayroll(2,"balu",35000,"M",new Date());
+    console.log(employeePayroll.toString()); 
+}
+catch(e){
+    console.error(e);
+}
